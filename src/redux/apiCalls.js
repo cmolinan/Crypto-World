@@ -1,14 +1,16 @@
-const ApiURL = 'https://api.spacexdata.com/v3/missions';
+// const ApiURL = 'https://api.coingecko.com/api/v3';
 
-const ApiGetAllMissions = async () => {
+const ApiURL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false';
+
+const ApiGetAllCryptos = async () => {
   const response = await fetch(ApiURL, {
     method: 'GET',
     headers: {
       Accept: 'application/json',
     },
   });
-  const missionsData = await response.json();
-  return missionsData;
+  const cryptosData = await response.json();
+  return cryptosData;
 };
 
-export default ApiGetAllMissions;
+export default ApiGetAllCryptos;

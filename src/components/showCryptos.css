@@ -1,0 +1,101 @@
+.mainCryptos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.oneCryptoDiv {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.oneCryptoDiv:hover {
+  background-color: antiquewhite;
+}
+
+.oneCryptoDiv img {
+  flex: 3 2;
+  width: 20vw;
+}
+
+.oneCryptoDiv h1 {
+  flex: 1;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.oneCryptoDiv p {
+  flex: 1;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 12px;
+  padding-left: 1%;
+}
+
+@media only screen and (min-width: 480px) {
+  .oneCryptoDiv {
+    border: 1px solid  blue;
+    width: 220px;
+    height: 220px;
+  }
+
+  .oneCryptoDiv h1 {
+    font-size: 18px;
+  }
+
+  .oneCryptoDiv img {
+    width: 20vw;
+  }
+
+  .oneCryptoDiv p {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .oneCryptoDiv {
+    border: 1px solid  green;
+    width: 240px;
+    height: 240px;
+  }
+
+  .oneCryptoDiv h1 {
+    font-size: 20px;
+  }
+
+  .oneCryptoDiv img {
+    width: 15vw;
+  }
+
+  .oneCryptoDiv p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .oneCryptoDiv {
+    border: 1px solid  green;
+    width: 260px;
+    height: 260px;
+  }
+
+  .oneCryptoDiv h1 {
+    font-size: 20px;
+  }
+
+  .oneCryptoDiv img {
+    width: 12vw;
+  }
+
+  .oneCryptoDiv p {
+    font-size: 16px;
+    height: 60px;
+  }
+}
