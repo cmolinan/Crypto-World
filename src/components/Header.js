@@ -1,17 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import style from './header.module.css';
 import style from './header.css';
+import Logo from '../assets/images/cryptoWorld.png';
 
 const Header = () => (
-  <header className={style.header_container}>
-    <h3>Metrics WebApp</h3>
+  <header className="header.css">
+    <div className="header_logo">
+      <img src={Logo} alt="logo" />
+    </div>
     <nav className={style.navlist}>
-      <li className={style.navlink}><NavLink to="/" exact="true">BOOKS</NavLink></li>
+      <li className={style.navlink}><NavLink to="/" exact="true">CRYPTO WORLD</NavLink></li>
     </nav>
   </header>
 );
-
-// <li className={style.navlink_l}><NavLink to="/categories" exact="true">CATEGORIES</NavLink></li>
 
 export default Header;

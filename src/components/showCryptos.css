@@ -99,3 +99,15 @@
     height: 60px;
   }
 }
+
+@media only screen and (min-width: 1500px) {
+  .oneCryptoDiv {
+    border: 1px solid black;
+    width: 280px;
+    height: 280px;
+  }
+
+  .oneCryptoDiv img {
+    width: 10vw;
+  }
+}
