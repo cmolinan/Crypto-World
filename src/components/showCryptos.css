@@ -8,19 +8,24 @@
 .oneCryptoDiv {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  border: 1px solid rgb(85, 85, 179);
   width: 150px;
   height: 150px;
   align-items: center;
   justify-content: center;
+  background: #3d60a2;
+}
+
+.oneCryptoDiv:nth-child(4n-2),
+.oneCryptoDiv:nth-child(4n-1) {
+  background: #4369b2;
 }
 
 .oneCryptoDiv:hover {
-  background-color: antiquewhite;
+  background-color: #5182df;
 }
 
 .oneCryptoDiv img {
-  flex: 3 2;
   width: 20vw;
 }
 
@@ -28,7 +33,7 @@
   flex: 1;
   height: 50px;
   padding-top: 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .oneCryptoDiv p {
@@ -41,7 +46,7 @@
 
 @media only screen and (min-width: 480px) {
   .oneCryptoDiv {
-    border: 1px solid  blue;
+    border: 1px solid rgb(85, 85, 179);
     width: 220px;
     height: 220px;
   }
@@ -61,9 +66,18 @@
 
 @media only screen and (min-width: 768px) {
   .oneCryptoDiv {
-    border: 1px solid  green;
+    border: 1px solid rgb(85, 85, 179);
     width: 240px;
     height: 240px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(2n) {
+    background: #4369b2;
   }
 
   .oneCryptoDiv h1 {
@@ -81,9 +95,21 @@
 
 @media only screen and (min-width: 1024px) {
   .oneCryptoDiv {
-    border: 1px solid  green;
+    border: 1px solid rgb(85, 85, 179);
     width: 260px;
     height: 260px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(8n-6),
+  .oneCryptoDiv:nth-child(8n-4),
+  .oneCryptoDiv:nth-child(8n-3),
+  .oneCryptoDiv:nth-child(8n-1) {
+    background: #4369b2;
   }
 
   .oneCryptoDiv h1 {
@@ -102,9 +128,25 @@
 
 @media only screen and (min-width: 1500px) {
   .oneCryptoDiv {
-    border: 1px solid black;
+    border: 1px solid rgb(85, 85, 179);
     width: 280px;
     height: 280px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(8n-6),
+  .oneCryptoDiv:nth-child(8n-4),
+  .oneCryptoDiv:nth-child(8n-3),
+  .oneCryptoDiv:nth-child(8n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(2n) {
+    background: #4369b2;
   }
 
   .oneCryptoDiv img {

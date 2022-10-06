@@ -1,24 +1,13 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import Details from './Details';
-import { asyncCryptosFromAPI } from '../redux/cryptos/cryptos';
 import './showCryptos.css';
 
-let firstTime = true;
-
 const ShowCryptos = () => {
-  const cryptosArray = useSelector((state) => state.stCryptos);
-  console.log('ARRAY:', cryptosArray);
-  const dispatch = useDispatch();
+  const cryptosFilterArray = useSelector((state) => state.stFilterCryptos);
+  console.log('FILTER ARRAY:', cryptosFilterArray);
 
-  useEffect(() => {
-    if (!firstTime) return;
-    firstTime = false;
-    dispatch((asyncCryptosFromAPI()));
-  }, [dispatch]);
-
-  const cryptoDiv = cryptosArray.map((crypto) => (
+  const cryptoDiv = cryptosFilterArray.map((crypto) => (
     <div key={crypto.id} className="oneCryptoDiv">
       <h1>{crypto.name}</h1>
       <Link to={`/Details/${crypto.id}`}>
