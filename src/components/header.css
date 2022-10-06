@@ -1,15 +1,44 @@
 .header_container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px auto 0 auto;
   width: 100%;
-  text-align: center;
+  text-align: left;
   background-color: white;
-  height: 5.87rem;
 }
 
-.header_container h3 {
+.header_logo img {
+  width: 30vw;
+  max-width: 200px;
+}
+
+#submit {
+  display: flex;
+  border: 1px solid gray;
+  height: 30px;
+  width: 80vw;
+  max-width: 300px;
+  margin-bottom: 12px;
+}
+
+.search {
+  height: 30px;
+}
+
+.input {
+  height: 28px;
+  margin-bottom: 10px;
+  width: 100vw;
+  border: none;
+  outline: none;
+}
+
+.input:focus {
+  border: none;
+}
+
+/* .header_container h3 {
   text-align: left;
   width: auto;
   height: 2.313rem;
@@ -23,9 +52,9 @@
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
-}
+} */
 
-.navlist {
+/* .navlist {
   display: flex;
   list-style: none;
 }
@@ -60,16 +89,20 @@
 .navlist a:hover {
   color: white;
   background-color: black;
-}
+} */
 
-@media only screen and (max-width: 767px) {
-  .navlist a {
-    font-size: 18px;
+@media only screen and (min-width: 480px) {
+  .header_container {
+    text-align: center;
+  }
+
+  #submit {
+    align-self: center;
   }
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (min-width: 768px) {
   .navlist a {
-    font-size: 14px;
+    font-size: 18px;
   }
 }

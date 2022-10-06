@@ -1,7 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './details.css';
+import SearchImg from '../assets/images/searchIcon.png';
 
 const Details = () => {
   const { id } = useParams();
@@ -14,11 +15,19 @@ const Details = () => {
 
   console.log(cryptosArray, id, data);
 
+  // const query = document.getElementById('submit');
+  // query.style.display = 'none';
+
   /* eslint-disable consistent-return */
   const renderData = () => {
     if (data) {
       return (
-        <div className="detail_div">
+        <div className="detail_div11">
+          <div className="header_lo1111go">
+            <Link to="/">
+              <img src={SearchImg} alt="return" />
+            </Link>
+          </div>
           <div className="det_head">
             <div className="det_headName">
               <p>

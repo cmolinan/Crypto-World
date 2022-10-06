@@ -30,7 +30,7 @@ const Header = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!txtToSearch) return;
+    // if (!txtToSearch) return;
     const filteredCryptos = cryptosArray
       .filter((crypto) => crypto.name.toLowerCase().includes(txtToSearch.toLowerCase()));
     console.log(filteredCryptos);
@@ -38,33 +38,25 @@ const Header = () => {
   };
 
   return (
-    <header className="header.css">
+    <header className="header_container">
       <div className="header_logo">
         <Link to="/">
           <img src={LogoImg} alt="logo" />
         </Link>
       </div>
       <form id="submit">
-        <div className="form1">
-          <span className="span-btn">
-            <button
-              type="submit"
-              className="btn"
-            >
-              <img alt="search" className="search" src={SearchImg} />
-            </button>
-          </span>
-          <input
-            type="search"
-            id="search"
-            className="input"
-            placeholder="Find a CryptoCurrency"
-            autoComplete="off"
-            value={txtToSearch}
-            onChange={(e) => setTxtToSearch(e.target.value)}
-            onKeyUp={handleSubmit}
-          />
-        </div>
+        <img alt="search" className="search" src={SearchImg} />
+        <input
+          type="search"
+          id="search"
+          className="input"
+          placeholder="Find a CryptoCurrency"
+          autoComplete="off"
+          value={txtToSearch}
+          onChange={(e) => setTxtToSearch(e.target.value)}
+          onKeyUp={handleSubmit}
+          onClick={handleSubmit}
+        />
       </form>
 
     </header>

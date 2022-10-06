@@ -3,13 +3,15 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 100vw;
 }
 
 .oneCryptoDiv {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(85, 85, 179);
-  width: 150px;
+
+  /* border: 1px solid rgb(85, 85, 179); */
+  width: 50vw;
   height: 150px;
   align-items: center;
   justify-content: center;
@@ -46,7 +48,7 @@
 
 @media only screen and (min-width: 480px) {
   .oneCryptoDiv {
-    border: 1px solid rgb(85, 85, 179);
+    /* border: 1px solid rgb(85, 85, 179); */
     width: 220px;
     height: 220px;
   }
@@ -66,7 +68,7 @@
 
 @media only screen and (min-width: 768px) {
   .oneCryptoDiv {
-    border: 1px solid rgb(85, 85, 179);
+    /* border: 1px solid rgb(85, 85, 179); */
     width: 240px;
     height: 240px;
   }
@@ -95,7 +97,7 @@
 
 @media only screen and (min-width: 1024px) {
   .oneCryptoDiv {
-    border: 1px solid rgb(85, 85, 179);
+    /* border: 1px solid rgb(85, 85, 179); */
     width: 260px;
     height: 260px;
   }
@@ -128,7 +130,7 @@
 
 @media only screen and (min-width: 1500px) {
   .oneCryptoDiv {
-    border: 1px solid rgb(85, 85, 179);
+    /* border: 1px solid rgb(85, 85, 179); */
     width: 280px;
     height: 280px;
   }
