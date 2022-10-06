@@ -13,84 +13,6 @@
   max-width: 200px;
 }
 
-#submit {
-  display: flex;
-  border: 1px solid gray;
-  height: 30px;
-  width: 80vw;
-  max-width: 300px;
-  margin-bottom: 12px;
-}
-
-.search {
-  height: 30px;
-}
-
-.input {
-  height: 28px;
-  margin-bottom: 10px;
-  width: 100vw;
-  border: none;
-  outline: none;
-}
-
-.input:focus {
-  border: none;
-}
-
-/* .header_container h3 {
-  text-align: left;
-  width: auto;
-  height: 2.313rem;
-  margin: 0.375rem 2.938rem 0.125rem 0;
-  padding-left: 7.5%;
-  font-family: Montserrat, sans-serif;
-  font-size: 1.875rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #0290ff;
-} */
-
-/* .navlist {
-  display: flex;
-  list-style: none;
-}
-
-.navlink {
-  padding: 0 10px;
-}
-
-.navlist a {
-  width: 3.688rem;
-  height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat, sans-serif;
-  font-size: 0.813rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.9px;
-  color: #121212;
-  text-decoration: none;
-}
-
-.navlist a:visited {
-  color: inherit;
-}
-
-.navlist a:active {
-  color: blue;
-}
-
-.navlist a:hover {
-  color: white;
-  background-color: black;
-} */
-
 @media only screen and (min-width: 480px) {
   .header_container {
     text-align: center;
@@ -98,11 +20,5 @@
 
   #submit {
     align-self: center;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .navlist a {
-    font-size: 18px;
   }
 }

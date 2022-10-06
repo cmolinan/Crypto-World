@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -6,13 +6,11 @@ import { updateFilterCryptos } from '../redux/cryptos/filtercryptos';
 import { asyncCryptosFromAPI } from '../redux/cryptos/cryptos';
 import './header.css';
 import LogoImg from '../assets/images/cryptoWorld.png';
-import SearchImg from '../assets/images/searchIcon.png';
 
 let firstTime = true;
 let firstTimeFilter = true;
 
 const Header = () => {
-  const [txtToSearch, setTxtToSearch] = useState('');
   const cryptosArray = useSelector((state) => state.stCryptos);
   const dispatch = useDispatch();
 
@@ -27,16 +25,6 @@ const Header = () => {
     dispatch((asyncCryptosFromAPI()));
   }, [dispatch]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // if (!txtToSearch) return;
-    const filteredCryptos = cryptosArray
-      .filter((crypto) => crypto.name.toLowerCase().includes(txtToSearch.toLowerCase()));
-    console.log(filteredCryptos);
-    dispatch(updateFilterCryptos(filteredCryptos));
-  };
-
   return (
     <header className="header_container">
       <div className="header_logo">
@@ -44,21 +32,6 @@ const Header = () => {
           <img src={LogoImg} alt="logo" />
         </Link>
       </div>
-      <form id="submit">
-        <img alt="search" className="search" src={SearchImg} />
-        <input
-          type="search"
-          id="search"
-          className="input"
-          placeholder="Find a CryptoCurrency"
-          autoComplete="off"
-          value={txtToSearch}
-          onChange={(e) => setTxtToSearch(e.target.value)}
-          onKeyUp={handleSubmit}
-          onClick={handleSubmit}
-        />
-      </form>
-
     </header>
   );
 };

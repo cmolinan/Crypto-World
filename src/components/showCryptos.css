@@ -9,8 +9,6 @@
 .oneCryptoDiv {
   display: flex;
   flex-direction: column;
-
-  /* border: 1px solid rgb(85, 85, 179); */
   width: 50vw;
   height: 150px;
   align-items: center;
@@ -46,6 +44,36 @@
   padding-left: 1%;
 }
 
+.mainDivDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+#submit {
+  display: flex;
+  border: 1px solid gray;
+  height: 30px;
+  width: 80vw;
+  max-width: 300px;
+  margin-bottom: 12px;
+}
+
+.search {
+  height: 30px;
+}
+
+.input {
+  height: 28px;
+  margin-bottom: 10px;
+  width: 100vw;
+  border: none;
+  outline: none;
+}
+
+.input:focus {
+  border: none;
+}
+
 @media only screen and (min-width: 480px) {
   .oneCryptoDiv {
     /* border: 1px solid rgb(85, 85, 179); */
@@ -68,7 +96,6 @@
 
 @media only screen and (min-width: 768px) {
   .oneCryptoDiv {
-    /* border: 1px solid rgb(85, 85, 179); */
     width: 240px;
     height: 240px;
   }
@@ -97,7 +124,6 @@
 
 @media only screen and (min-width: 1024px) {
   .oneCryptoDiv {
-    /* border: 1px solid rgb(85, 85, 179); */
     width: 260px;
     height: 260px;
   }
@@ -130,7 +156,6 @@
 
 @media only screen and (min-width: 1500px) {
   .oneCryptoDiv {
-    /* border: 1px solid rgb(85, 85, 179); */
     width: 280px;
     height: 280px;
   }
