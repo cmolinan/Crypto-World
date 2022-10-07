@@ -1,24 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import Details from './Details';
-import { asyncCryptosFromAPI } from '../redux/cryptos/cryptos';
 import './showCryptos.css';
-
-let firstTime = true;
+import { updateFilterCryptos } from '../redux/cryptos/filtercryptos';
+import SearchImg from '../assets/images/searchIcon.png';
 
 const ShowCryptos = () => {
+  const [txtToSearch, setTxtToSearch] = useState('');
+  const cryptosFilterArray = useSelector((state) => state.stFilterCryptos);
+
   const cryptosArray = useSelector((state) => state.stCryptos);
-  console.log('ARRAY:', cryptosArray);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (!firstTime) return;
-    firstTime = false;
-    dispatch((asyncCryptosFromAPI()));
-  }, [dispatch]);
+  const prevTxtToSearch = useRef();
 
-  const cryptoDiv = cryptosArray.map((crypto) => (
+  useEffect(() => {
+    prevTxtToSearch.current = txtToSearch;
+  }, [txtToSearch]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const filteredCryptos = cryptosArray
+      .filter((crypto) => crypto.name.toLowerCase().includes(txtToSearch.toLowerCase()));
+    dispatch(updateFilterCryptos(filteredCryptos));
+  };
+
+  const cryptoDiv = cryptosFilterArray.map((crypto) => (
     <div key={crypto.id} className="oneCryptoDiv">
       <h1>{crypto.name}</h1>
       <Link to={`/Details/${crypto.id}`}>
@@ -31,13 +38,30 @@ const ShowCryptos = () => {
       <p>
         Curr. Price: $
         {crypto.current_price}
+        {prevTxtToSearch.current}
       </p>
     </div>
   ));
 
   return (
-    <div className="mainCryptos">
-      {cryptoDiv}
+    <div className="mainDivDetails">
+      <form id="submit">
+        <img alt="search" className="search" src={SearchImg} />
+        <input
+          type="text"
+          id="search"
+          className="input"
+          placeholder="Find a CryptoCurrency"
+          autoComplete="off"
+          value={txtToSearch}
+          onChange={(e) => setTxtToSearch(e.target.value)}
+          onKeyUp={handleSubmit}
+          onClick={handleSubmit}
+        />
+      </form>
+      <div className="mainCryptos">
+        {cryptoDiv}
+      </div>
     </div>
   );
 };

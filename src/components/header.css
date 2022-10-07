@@ -1,75 +1,28 @@
 .header_container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px auto 0 auto;
   width: 100%;
-  text-align: center;
-  background-color: white;
-  height: 5.87rem;
-}
-
-.header_container h3 {
   text-align: left;
-  width: auto;
-  height: 2.313rem;
-  margin: 0.375rem 2.938rem 0.125rem 0;
-  padding-left: 7.5%;
-  font-family: Montserrat, sans-serif;
-  font-size: 1.875rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #0290ff;
 }
 
-.navlist {
-  display: flex;
-  list-style: none;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(196, 197, 195);
+  opacity: 1; /* Firefox */
 }
 
-.navlink {
-  padding: 0 10px;
+.header_logo img {
+  width: 50vw;
+  max-width: 200px;
 }
 
-.navlist a {
-  width: 3.688rem;
-  height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat, sans-serif;
-  font-size: 0.813rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.9px;
-  color: #121212;
-  text-decoration: none;
-}
-
-.navlist a:visited {
-  color: inherit;
-}
-
-.navlist a:active {
-  color: blue;
-}
-
-.navlist a:hover {
-  color: white;
-  background-color: black;
-}
-
-@media only screen and (max-width: 767px) {
-  .navlist a {
-    font-size: 18px;
+@media only screen and (min-width: 480px) {
+  .header_container {
+    text-align: center;
   }
-}
 
-@media only screen and (max-width: 479px) {
-  .navlist a {
-    font-size: 14px;
+  #submit {
+    align-self: center;
   }
 }

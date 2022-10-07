@@ -1,43 +1,30 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './details.css';
+import returnImg from '../assets/images/return.png';
 
 const Details = () => {
   const { id } = useParams();
   const cryptosArray = useSelector((state) => state.stCryptos);
 
+  const navigate = useNavigate();
+
   let data = cryptosArray.filter((obj) => obj.id === id);
-  data = data ? data[0] : null; // or undefined
+  data = data ? data[0] : null;
 
   const data2 = new Intl.NumberFormat();
-
-  console.log(cryptosArray, id, data);
 
   /* eslint-disable consistent-return */
   const renderData = () => {
     if (data) {
       return (
         <div className="detail_div">
-          <div className="det_head">
-            <div className="det_headName">
-              <p>
-                Name:
-                {' '}
-                {data.name}
-              </p>
-              <p>
-                Symbol:
-                {' '}
-                {data.symbol}
-              </p>
-              <p>
-                Ranking: #
-                {data.market_cap_rank}
-              </p>
-              <p>
-                Icon:
-              </p>
+          <div className="det_header d1">
+            <div className="detail_return">
+              <button type="button" className="btn" onClick={() => navigate(-1)}>
+                <img src={returnImg} alt="Return" />
+              </button>
             </div>
             <div className="det_headImgDiv">
               <img
@@ -46,59 +33,102 @@ const Details = () => {
                 alt={data.name}
               />
             </div>
-            <hr />
+            <div className="det_dataIni">
+              <div className="det_headName">
+                <div className="det_h">
+                  <p className="det_hN">Name:</p>
+                  <p className="det_hT">
+                    {data.name}
+                  </p>
+                </div>
+                <div className="det_h">
+                  <p className="det_hN">Symbol:</p>
+                  <p className="det_hT">
+                    {data.symbol}
+                  </p>
+                </div>
+                <div className="det_h">
+                  <p className="det_hN">Ranking:</p>
+                  <p className="det_hT">
+                    #
+                    {data.market_cap_rank}
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
           </div>
 
-          <div className="det_price">
-            <h2>** PRICE **</h2>
-            <p>
-              Current:
-              { ' USD ' }
-              {data2.format(data.current_price)}
-            </p>
-            <p>
-              High (last 24h):
-              { ' USD ' }
-              {data2.format(data.high_24h)}
-            </p>
-            <p>
-              Low (last 24h):
-              { ' USD ' }
-              {data2.format(data.low_24h)}
-            </p>
+          <div className="det_others">
+            <div className="det_othTitle">
+              <p className="det_othN">Price</p>
+            </div>
+            <div className="det_othData">
+              <p>
+                <span className="det_span">Current:</span>
+                { ' USD ' }
+                {data2.format(data.current_price)}
+              </p>
+              <p>
+                <span className="det_span">High (last 24h):</span>
+                { ' USD ' }
+                {data2.format(data.high_24h)}
+              </p>
+              <p>
+                <span className="det_span">Low (last 24h):</span>
+                { ' USD ' }
+                {data2.format(data.low_24h)}
+              </p>
+            </div>
           </div>
 
-          <div className="det_market">
-            <h2>** Market Capitalization **</h2>
-            <p>
-              { ' USD ' }
-              {data2.format(data.market_cap)}
-            </p>
-            <p>
-              Ranking: #
-              {data.market_cap_rank}
-            </p>
+          <div className="det_others d1">
+            <div className="det_othTitle">
+              <p className="det_othN">Market Capitalization</p>
+            </div>
+            <div className="det_othData">
+              <p>
+                { ' USD ' }
+                {data2.format(data.market_cap)}
+              </p>
+              <p>
+                <span className="det_span">Ranking:</span>
+                {' #'}
+                {data.market_cap_rank}
+              </p>
+            </div>
           </div>
 
-          <div className="det_trading">
-            <h2>** Trading Volume (last 24h) **</h2>
-            <p>
-              { ' USD ' }
-              {data2.format(data.total_volume)}
-            </p>
+          <div className="det_others">
+            <div className="det_othTitle">
+              <p className="det_othN">Trading Volume (last 24h)</p>
+            </div>
+            <div className="det_othData">
+              <p>
+                { ' USD ' }
+                {data2.format(data.total_volume)}
+              </p>
+            </div>
           </div>
 
-          <div className="det_total">
-            <h2>** Maximum  Supply **</h2>
-            <p>{data2.format(data.total_supply)}</p>
+          <div className="det_others d1">
+            <div className="det_othTitle">
+              <p className="det_othN">Maximum  Supply</p>
+            </div>
+            <div className="det_othData">
+              <p>{data2.format(data.total_supply)}</p>
+            </div>
           </div>
 
-          <div className="det_circulation">
-            <h2>** Circulation Supply **</h2>
-            <p>{data2.format(data.circulating_supply)}</p>
+          <div className="det_others">
+            <div className="det_othTitle">
+              <p className="det_othN">Circulation Supply</p>
+            </div>
+            <div className="det_othData">
+              <p>{data2.format(data.circulating_supply)}</p>
+            </div>
           </div>
-
-          <hr />
         </div>
       );
     }

@@ -3,24 +3,29 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 100vw;
 }
 
 .oneCryptoDiv {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  width: 150px;
+  width: 50vw;
   height: 150px;
   align-items: center;
   justify-content: center;
+  background: #3d60a2;
+}
+
+.oneCryptoDiv:nth-child(4n-2),
+.oneCryptoDiv:nth-child(4n-1) {
+  background: #4369b2;
 }
 
 .oneCryptoDiv:hover {
-  background-color: antiquewhite;
+  background-color: #5182df;
 }
 
 .oneCryptoDiv img {
-  flex: 3 2;
   width: 20vw;
 }
 
@@ -28,7 +33,7 @@
   flex: 1;
   height: 50px;
   padding-top: 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .oneCryptoDiv p {
@@ -39,9 +44,41 @@
   padding-left: 1%;
 }
 
+.mainDivDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+#submit {
+  display: flex;
+  border: 1px solid gray;
+  height: 25px;
+  width: 60vw;
+  max-width: 300px;
+  margin-bottom: 12px;
+}
+
+.search {
+  height: 25px;
+  background: #5182df;
+}
+
+.input {
+  height: 25px;
+  margin-bottom: 10px;
+  width: 100vw;
+  border: none;
+  outline: none;
+  background-color: #5182df;
+  color: white;
+}
+
+.input:focus {
+  border: none;
+}
+
 @media only screen and (min-width: 480px) {
   .oneCryptoDiv {
-    border: 1px solid  blue;
     width: 220px;
     height: 220px;
   }
@@ -61,9 +98,17 @@
 
 @media only screen and (min-width: 768px) {
   .oneCryptoDiv {
-    border: 1px solid  green;
     width: 240px;
     height: 240px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(2n) {
+    background: #4369b2;
   }
 
   .oneCryptoDiv h1 {
@@ -81,9 +126,20 @@
 
 @media only screen and (min-width: 1024px) {
   .oneCryptoDiv {
-    border: 1px solid  green;
     width: 260px;
     height: 260px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(8n-6),
+  .oneCryptoDiv:nth-child(8n-4),
+  .oneCryptoDiv:nth-child(8n-3),
+  .oneCryptoDiv:nth-child(8n-1) {
+    background: #4369b2;
   }
 
   .oneCryptoDiv h1 {
@@ -102,9 +158,24 @@
 
 @media only screen and (min-width: 1500px) {
   .oneCryptoDiv {
-    border: 1px solid black;
     width: 280px;
     height: 280px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(8n-6),
+  .oneCryptoDiv:nth-child(8n-4),
+  .oneCryptoDiv:nth-child(8n-3),
+  .oneCryptoDiv:nth-child(8n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(2n) {
+    background: #4369b2;
   }
 
   .oneCryptoDiv img {

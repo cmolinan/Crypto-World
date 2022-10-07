@@ -1,6 +1,6 @@
 n![](https://img.shields.io/badge/Microverse-blueviolet)
 ​
-# Metrics WebApp
+# Crypto World - A Metrics WebApp
 This React/Redux Capstone Project is about building a mobile web application to check a list of metrics (numeric values), working with real live data from an  API.
 ​
 ## Built With
@@ -37,7 +37,7 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 Give a ⭐️ if you like this project!
 ## Acknowledgments 
-This webpage is based on a Microverse request
+This webpage is based on a Microverse request, using the original design that belongs to Creative Commons
 ## �� License
 This project is [MIT](./MIT.md) licensed.
  

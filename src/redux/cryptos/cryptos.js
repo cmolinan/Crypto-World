@@ -7,7 +7,7 @@ const reducerCryptos = createSlice({
   name: 'cryptos',
   initialState,
   reducers: {
-    getCryptosAPI: (state, action) => {
+    getCryptosAPI: (state = initialState, action) => {
       const tmpArray = Object.entries(action.payload).map((value) => (
         { ...value[1] }
       ));
