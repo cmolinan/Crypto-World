@@ -17,6 +17,14 @@
   max-width: 200px;
 }
 
+.header_logo p {
+  width: 50vw;
+  font-size: 10px;
+  color: rgb(224, 215, 215);
+  padding-bottom: 8px;
+  padding-left: 5px;
+}
+
 @media only screen and (min-width: 480px) {
   .header_container {
     text-align: center;
@@ -24,5 +32,11 @@
 
   #submit {
     align-self: center;
+  }
+
+  .header_logo p {
+    font-size: 12px;
+    margin: auto;
+    padding-left: 0;
   }
 }

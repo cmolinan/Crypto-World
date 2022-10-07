@@ -29,8 +29,9 @@ const Header = () => {
     <header className="header_container">
       <div className="header_logo">
         <Link to="/">
-          <img src={LogoImg} alt="logo" />
+          <img className="logoImg" src={LogoImg} alt="logo" />
         </Link>
+        <p>Powered by CoinGecko</p>
       </div>
     </header>
   );
