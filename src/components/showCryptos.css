@@ -16,12 +16,17 @@
   background: #3d60a2;
 }
 
+.oneCryptoDiv:hover {
+  background-color: #5182df;
+}
+
 .oneCryptoDiv:nth-child(4n-2),
 .oneCryptoDiv:nth-child(4n-1) {
   background: #4369b2;
 }
 
-.oneCryptoDiv:hover {
+.oneCryptoDiv:nth-child(4n-2):hover,
+.oneCryptoDiv:nth-child(4n-1):hover {
   background-color: #5182df;
 }
 
@@ -111,6 +116,10 @@
     background: #4369b2;
   }
 
+  .oneCryptoDiv:nth-child(2n):hover {
+    background: #5182df;
+  }
+
   .oneCryptoDiv h1 {
     font-size: 20px;
   }
@@ -140,6 +149,18 @@
   .oneCryptoDiv:nth-child(8n-3),
   .oneCryptoDiv:nth-child(8n-1) {
     background: #4369b2;
+  }
+
+  .oneCryptoDiv:nth-child(8n-6):hover,
+  .oneCryptoDiv:nth-child(8n-4):hover,
+  .oneCryptoDiv:nth-child(8n-3):hover,
+  .oneCryptoDiv:nth-child(8n-1):hover {
+    background: #5182df;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2):hover,
+  .oneCryptoDiv:nth-child(4n-1):hover {
+    background: #5182df;
   }
 
   .oneCryptoDiv h1 {
