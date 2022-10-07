@@ -7,7 +7,6 @@ const reducerFilterCryptos = createSlice({
   initialState,
   reducers: {
     updateFilterCryptos: (state = initialState, action) => {
-      console.log(action.payload);
       const tmpArray = Object.entries(action.payload).map((value) => (
         { ...value[1] }
       ));

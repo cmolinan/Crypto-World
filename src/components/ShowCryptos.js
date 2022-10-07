@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './showCryptos.css';
 import { updateFilterCryptos } from '../redux/cryptos/filtercryptos';
 import SearchImg from '../assets/images/searchIcon.png';
 
+let txtTo = '';
 const ShowCryptos = () => {
   const [txtToSearch, setTxtToSearch] = useState('');
   const cryptosFilterArray = useSelector((state) => state.stFilterCryptos);
@@ -12,17 +13,20 @@ const ShowCryptos = () => {
   const cryptosArray = useSelector((state) => state.stCryptos);
   const dispatch = useDispatch();
 
-  const prevTxtToSearch = useRef();
-
   useEffect(() => {
-    prevTxtToSearch.current = txtToSearch;
-  }, [txtToSearch]);
+    if (txtToSearch === '') {
+      setTxtToSearch(txtTo);
+      document.getElementById('search').value = txtTo;
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const filteredCryptos = cryptosArray
       .filter((crypto) => crypto.name.toLowerCase().includes(txtToSearch.toLowerCase()));
     dispatch(updateFilterCryptos(filteredCryptos));
+    txtTo = txtToSearch;
   };
 
   const cryptoDiv = cryptosFilterArray.map((crypto) => (
@@ -38,7 +42,6 @@ const ShowCryptos = () => {
       <p>
         Curr. Price: $
         {crypto.current_price}
-        {prevTxtToSearch.current}
       </p>
     </div>
   ));
@@ -53,7 +56,6 @@ const ShowCryptos = () => {
           className="input"
           placeholder="Find a CryptoCurrency"
           autoComplete="off"
-          value={txtToSearch}
           onChange={(e) => setTxtToSearch(e.target.value)}
           onKeyUp={handleSubmit}
           onClick={handleSubmit}
