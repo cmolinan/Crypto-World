@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './showCryptos.css';
@@ -12,9 +12,14 @@ const ShowCryptos = () => {
   const cryptosArray = useSelector((state) => state.stCryptos);
   const dispatch = useDispatch();
 
+  const prevTxtToSearch = useRef();
+
+  useEffect(() => {
+    prevTxtToSearch.current = txtToSearch;
+  }, [txtToSearch]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (!txtToSearch) return;
     const filteredCryptos = cryptosArray
       .filter((crypto) => crypto.name.toLowerCase().includes(txtToSearch.toLowerCase()));
     dispatch(updateFilterCryptos(filteredCryptos));
@@ -33,6 +38,7 @@ const ShowCryptos = () => {
       <p>
         Curr. Price: $
         {crypto.current_price}
+        {prevTxtToSearch.current}
       </p>
     </div>
   ));
@@ -42,7 +48,7 @@ const ShowCryptos = () => {
       <form id="submit">
         <img alt="search" className="search" src={SearchImg} />
         <input
-          type="search"
+          type="text"
           id="search"
           className="input"
           placeholder="Find a CryptoCurrency"

@@ -52,22 +52,25 @@
 #submit {
   display: flex;
   border: 1px solid gray;
-  height: 30px;
-  width: 80vw;
+  height: 25px;
+  width: 60vw;
   max-width: 300px;
   margin-bottom: 12px;
 }
 
 .search {
-  height: 30px;
+  height: 25px;
+  background: #5182df;
 }
 
 .input {
-  height: 28px;
+  height: 25px;
   margin-bottom: 10px;
   width: 100vw;
   border: none;
   outline: none;
+  background-color: #5182df;
+  color: white;
 }
 
 .input:focus {
@@ -76,7 +79,6 @@
 
 @media only screen and (min-width: 480px) {
   .oneCryptoDiv {
-    /* border: 1px solid rgb(85, 85, 179); */
     width: 220px;
     height: 220px;
   }

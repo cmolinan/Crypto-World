@@ -5,11 +5,15 @@
   margin: 5px auto 0 auto;
   width: 100%;
   text-align: left;
-  background-color: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(196, 197, 195);
+  opacity: 1; /* Firefox */
 }
 
 .header_logo img {
-  width: 30vw;
+  width: 50vw;
   max-width: 200px;
 }
 

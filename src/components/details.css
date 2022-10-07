@@ -1,12 +1,181 @@
+.detail_div {
+  color: white;
+  background: #3d60a2;
+  margin-bottom: 1%;
+}
+
+.det_header {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.detail_return {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.detail_return button {
+  background: #4369b2;
+  border: none;
+}
+
+.detail_return img {
+  width: 35px;
+}
+
+.detail_return img:hover {
+  width: 38px;
+}
+
 .det_headImgDiv {
-  width: 80px;
-  height: 80px;
+  flex: 1;
+  display: flex;
+  border: none;
 }
 
 .det_headImg {
-  width: 90%;
+  width: 60%;
+  margin: auto;
 }
 
-h2 {
-  font-size: 16px;
+.det_dataIni {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+.det_headName {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.det_h {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
+
+.det_hN {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: bold;
+  min-width: 110px;
+}
+
+.det_hT {
+  font-size: 18px;
+  font-style: normal;
+  text-decoration: solid;
+  padding-top: 5px;
+  padding-left: 3px;
+}
+
+.det_others {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5% 0;
+}
+
+.det_othN {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.det_othData {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-style: normal;
+  text-decoration: solid;
+  padding-top: 5px;
+  padding-left: 3px;
+}
+
+.det_span {
+  text-decoration: underline;
+}
+
+.d1 {
+  background-color: #4369b2;
+}
+
+@media only screen and (min-width: 480px) {
+  .detail_div {
+    width: 95%;
+    margin: auto;
+  }
+
+  .det_header {
+    flex-direction: row;
+  }
+
+  .det_hN {
+    font-size: 22px;
+    min-width: 130px;
+  }
+
+  .det_hT {
+    font-size: 18px;
+    padding-left: 7px;
+  }
+
+  .det_others {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 2% 0;
+  }
+
+  .det_othTitle {
+    flex: 1;
+    display: flex;
+    min-width: 220px;
+    align-items: center;
+    justify-content: right;
+    padding-right: 1%;
+  }
+
+  .det_othData {
+    flex: 1.3;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 1%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .det_header {
+      padding: 2%;
+      width: 100%;
+    }
+
+    .det_hN {
+      font-size: 23px;
+      min-width: 130px;
+    }
+
+    .det_hT {
+      font-size: 20px;
+      padding-left: 7px;
+    }
+
+    .det_othTitle {
+      flex: 1;
+      font-size: 23px;
+    }
+
+    .det_othData {
+      flex: 1;
+      font-size: 20px;
+    }
+  }
 }
