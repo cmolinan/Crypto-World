@@ -1,75 +1,45 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+n![](https://img.shields.io/badge/Microverse-blueviolet)
+​
+# Crypto World - A Metrics WebApp
+This React/Redux Capstone Project is about building a mobile web application to check a list of metrics (numeric values), working with real live data from an  API.
 
-# Project Name
-
-> Description the project.
-
-
+For this, I chose to make a webApp that shows online information, coming from the company CoinGecko, about the hundred most important Cryptocurrencies of the moment, also showing some of their detailed data.​
 ## Built With
+- Redux and React JS 
+    { 
+      components, events, states, hooks, 
+      props, router, stores, actions/reducers, API, etc
+    }
+- JSX
+- JavaScript
+- Webpack
+- GitFlow
+- Testing with Jest
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
+## Live Demo
+[Link to live Demo](https://react-redux-capstone-crypto-world.netlify.app/)
+## Video preview
+[Video Presentation](https://drive.google.com/file/d/1AnT96bkRrC7rT_EroqC1kVuxQy2Sxe4_/view?usp=sharing)
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
+- To get a local copy up, clone the repo like this: 
+​
+  git clone https://github.com/cmolinan/Metrics-WebApp.git
+​
+- Install the dependencies using `npm install` and then run the project from the root of the folder using this command `npm run start`
 ## Authors
+👤 **Carlos Molina**
+- GitHub: https://github.com/cmolinan
+- LinkedIn: [Carlos Molina](https://www.linkedin.com/in/carlosmolinan/)
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-## 🤝 Contributing
-
+## �� Contributing
 Contributions, issues, and feature requests are welcome!
-
+Feel free to check the issues page.
 Feel free to check the [issues page](../../issues/).
-
+​
 ## Show your support
-
 Give a ⭐️ if you like this project!
+## Acknowledgments 
+This webApp responds to a request from Microverse, which is based on the original idea of Nelson Sakwa, according to the Creative Commons License
+## �� License
+This project is [MIT](./MIT.md) licensed.
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._

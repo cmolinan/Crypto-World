@@ -1,0 +1,237 @@
+.mainCryptos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.oneCryptoDiv {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 160px;
+  align-items: center;
+  justify-content: center;
+  background: #3d60a2;
+}
+
+.oneCryptoDiv:hover {
+  background-color: #5182df;
+}
+
+.oneCryptoDiv:nth-child(4n-2),
+.oneCryptoDiv:nth-child(4n-1) {
+  background: #4369b2;
+}
+
+.oneCryptoDiv:nth-child(4n-2):hover,
+.oneCryptoDiv:nth-child(4n-1):hover {
+  background-color: #5182df;
+}
+
+.oneCryptoUp {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.oneCryptoUp h1 {
+  width: 60%;
+  height: 35px;
+  padding-top: 10px;
+  font-size: 14px;
+  color: rgb(236, 236, 236);
+  text-align: center;
+}
+
+.divImgFwd0,
+.divImgFwd {
+  width: 20%;
+  text-align: right;
+  padding-right: 3px;
+  padding-top: 3px;
+}
+
+.divImgFwd0 {
+  visibility: hidden;
+}
+
+.imgForward {
+  width: 25px;
+  height: 25px;
+}
+
+.oneCryptoDiv p {
+  flex: 1;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 12px;
+  padding-left: 1%;
+  color: rgb(236, 236, 236);
+}
+
+.image {
+  width: 20vw;
+}
+
+.mainDivDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+#submit {
+  display: flex;
+  border: 1px solid gray;
+  height: 25px;
+  width: 60vw;
+  max-width: 300px;
+  margin-bottom: 12px;
+}
+
+.search {
+  height: 25px;
+  background: #5182df;
+}
+
+.input {
+  height: 25px;
+  margin-bottom: 10px;
+  width: 100vw;
+  border: none;
+  outline: none;
+  background-color: #5182df;
+  color: white;
+}
+
+.input:focus {
+  border: none;
+}
+
+@media only screen and (min-width: 480px) {
+  .oneCryptoDiv {
+    width: 240px;
+    height: 240px;
+  }
+
+  .oneCryptoDiv h1 {
+    font-size: 18px;
+  }
+
+  .image {
+    width: 20vw;
+  }
+
+  .oneCryptoDiv p {
+    font-size: 13px;
+  }
+
+  .imgForward {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .oneCryptoDiv {
+    width: 240px;
+    height: 240px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(2n) {
+    background: #4369b2;
+  }
+
+  .oneCryptoDiv:nth-child(2n):hover {
+    background: #5182df;
+  }
+
+  .oneCryptoDiv h1 {
+    font-size: 20px;
+  }
+
+  .image {
+    width: 15vw;
+  }
+
+  .oneCryptoDiv p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .oneCryptoDiv {
+    width: 260px;
+    height: 260px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(8n-6),
+  .oneCryptoDiv:nth-child(8n-4),
+  .oneCryptoDiv:nth-child(8n-3),
+  .oneCryptoDiv:nth-child(8n-1) {
+    background: #4369b2;
+  }
+
+  .oneCryptoDiv:nth-child(8n-6):hover,
+  .oneCryptoDiv:nth-child(8n-4):hover,
+  .oneCryptoDiv:nth-child(8n-3):hover,
+  .oneCryptoDiv:nth-child(8n-1):hover {
+    background: #5182df;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2):hover,
+  .oneCryptoDiv:nth-child(4n-1):hover {
+    background: #5182df;
+  }
+
+  .oneCryptoDiv h1 {
+    font-size: 20px;
+  }
+
+  .image {
+    width: 12vw;
+  }
+
+  .oneCryptoDiv p {
+    font-size: 16px;
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .oneCryptoDiv {
+    width: 280px;
+    height: 280px;
+  }
+
+  .oneCryptoDiv:nth-child(4n-2),
+  .oneCryptoDiv:nth-child(4n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(8n-6),
+  .oneCryptoDiv:nth-child(8n-4),
+  .oneCryptoDiv:nth-child(8n-3),
+  .oneCryptoDiv:nth-child(8n-1) {
+    background: #3d60a2;
+  }
+
+  .oneCryptoDiv:nth-child(2n) {
+    background: #4369b2;
+  }
+
+  .image {
+    width: 10vw;
+  }
+}

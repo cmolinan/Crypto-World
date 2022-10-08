@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+  background-image: url('./assets/images/background.png');
+  background-position: 0%;
+  background-size: 100%;
+}

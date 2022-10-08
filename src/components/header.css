@@ -1,0 +1,43 @@
+.header_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px auto 0 auto;
+  width: 100%;
+  text-align: left;
+  min-width: 320px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(196, 197, 195);
+  opacity: 1; /* Firefox */
+}
+
+.header_logo img {
+  width: 50vw;
+  max-width: 200px;
+}
+
+.header_logo p {
+  width: 50vw;
+  font-size: 10px;
+  color: rgb(224, 215, 215);
+  padding-bottom: 8px;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 480px) {
+  .header_container {
+    text-align: center;
+  }
+
+  #submit {
+    align-self: center;
+  }
+
+  .header_logo p {
+    font-size: 12px;
+    margin: auto;
+    padding-left: 0;
+  }
+}
