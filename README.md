@@ -2,12 +2,13 @@ n![](https://img.shields.io/badge/Microverse-blueviolet)
 ​
 # Crypto World - A Metrics WebApp
 This React/Redux Capstone Project is about building a mobile web application to check a list of metrics (numeric values), working with real live data from an  API.
-​
+
+For this, I chose to make a webApp that shows online information, coming from the company CoinGecko, about the hundred most important Cryptocurrencies of the moment, also showing some of their detailed data.​
 ## Built With
 - Redux and React JS 
     { 
       components, events, states, hooks, 
-      props, router, actions/reducers , API, etc
+      props, router, stores, actions/reducers, API, etc
     }
 - JSX
 - JavaScript
@@ -16,8 +17,9 @@ This React/Redux Capstone Project is about building a mobile web application to 
 - Testing with Jest
 
 ## Live Demo
-[Link to live Demo](Under construction)
-
+[Link to live Demo](https://react-redux-capstone-crypto-world.netlify.app/)
+## Video preview
+[Video Presentation](https://drive.google.com/file/d/1AnT96bkRrC7rT_EroqC1kVuxQy2Sxe4_/view?usp=sharing)
 ## Getting Started
 - To get a local copy up, clone the repo like this: 
 ​
