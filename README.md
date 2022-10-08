@@ -39,7 +39,7 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 Give a ⭐️ if you like this project!
 ## Acknowledgments 
-This webpage is based on a Microverse request, using the original design that belongs to Creative Commons
+This webApp responds to a request from Microverse, which is based on the original idea of Nelson Sakwa, according to the Creative Commons License
 ## �� License
 This project is [MIT](./MIT.md) licensed.
- 
+

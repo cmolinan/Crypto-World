@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './showCryptos.css';
 import { updateFilterCryptos } from '../redux/cryptos/filtercryptos';
 import SearchImg from '../assets/images/searchIcon.png';
+import ForwardImg from '../assets/images/forward.png';
 
 let txtTo = '';
 const ShowCryptos = () => {
@@ -31,7 +32,25 @@ const ShowCryptos = () => {
 
   const cryptoDiv = cryptosFilterArray.map((crypto) => (
     <div key={crypto.id} className="oneCryptoDiv">
-      <h1>{crypto.name}</h1>
+      <div className="oneCryptoUp">
+        <div className="divImgFwd0">
+          <img
+            className="imgForward"
+            src={ForwardImg}
+            alt="details"
+          />
+        </div>
+        <h1>{crypto.name}</h1>
+        <div className="divImgFwd">
+          <Link to={`/Details/${crypto.id}`}>
+            <img
+              className="imgForward"
+              src={ForwardImg}
+              alt="details"
+            />
+          </Link>
+        </div>
+      </div>
       <Link to={`/Details/${crypto.id}`}>
         <img
           className="image"
