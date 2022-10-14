@@ -1,0 +1,15 @@
+.chart {
+  border: 1px solid red;
+  width: 50%;
+  height: 300px;
+  margin: 0 auto;
+  background: white;
+  color: red;
+}
+
+#chartDiv {
+  width: 50%;
+  height: 100%;
+  background: white;
+  color: red;
+}

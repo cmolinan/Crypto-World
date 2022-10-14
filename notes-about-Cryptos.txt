@@ -1,0 +1,137 @@
+CoinList = (currency) => `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false`;
+
+SingleCoin = (id) => `https://api.coingecko.com/api/v3/coins/${id}`;
+
+HistoricalChart = (id, days = 365, currency) 
+example:   id=bitcoin   currency=usd days=7  interval=daily 
+'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7&interval=daily' 
+(devuelve:    "prices", "market_caps" y "total_volumes" en Unix Timestamp)
+
+
+
+https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=360
+
+TrendingCoins = (currency) => `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`;
+
+
+SingleCoin = (id) => `https://api.coingecko.com/api/v3/coins/${id}`;
+--largo:  no me gusta
+
+  "description": {   --en varios idiomas
+    "en": "Bitcoin is the first successful internet money based on peer-to-peer technology; whereby no 
+  "image": {
+    "thumb": "https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579",
+    "small": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+    "large": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+  },
+
+
+
+USD
+https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false
+
+
+
+[
+  {
+    "id": "bitcoin",
+    "symbol": "btc",
+    "name": "Bitcoin",
+    "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+    "current_price": 19554.58,
+    "market_cap": 374953174565,
+    "market_cap_rank": 1,
+    "fully_diluted_valuation": 410783940722,
+    "total_volume": 28397668272,
+    "high_24h": 19646.91,
+    "low_24h": 18928.73,
+    "price_change_24h": 303.44,
+    "price_change_percentage_24h": 1.57623,
+    "market_cap_change_24h": 5819296709,
+    "market_cap_change_percentage_24h": 1.57647,
+    "circulating_supply": 19168268,
+    "total_supply": 21000000,
+    "max_supply": 21000000,
+    "ath": 69045,
+    "ath_change_percentage": -71.67022,
+    "ath_date": "2021-11-10T14:24:11.849Z",
+    "atl": 67.81,
+    "atl_change_percentage": 28746.06997,
+    "atl_date": "2013-07-06T00:00:00.000Z",
+    "roi": null,
+    "last_updated": "2022-10-03T21:05:38.201Z"
+  },
+  {
+    "id": "ethereum",
+    "symbol": "eth",
+    "name": "Ethereum",
+    "image": "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880",
+    "current_price": 1320.93,
+    "market_cap": 159588690035,
+    "market_cap_rank": 2,
+    "fully_diluted_valuation": null,
+    "total_volume": 9349349468,
+    "high_24h": 1326.82,
+    "low_24h": 1274.09,
+    "price_change_24h": 19.07,
+    "price_change_percentage_24h": 1.46468,
+    "market_cap_change_24h": 2016712236,
+    "market_cap_change_percentage_24h": 1.27987,
+    "circulating_supply": 120795276.142764,
+    "total_supply": 120795276.142764,
+    "max_supply": null,
+    "ath": 4878.26,
+    "ath_change_percentage": -72.93376,
+    "ath_date": "2021-11-10T14:24:19.604Z",
+    "atl": 0.432979,
+    "atl_change_percentage": 304848.35431,
+    "atl_date": "2015-10-20T00:00:00.000Z",
+    "roi": {
+      "times": 89.32274160800904,
+      "currency": "btc",
+      "percentage": 8932.274160800904
+    },
+    "last_updated": "2022-10-03T21:05:36.279Z"
+  },
+..
+...
+
+]
+
+------------
+{
+  "prices": [
+    [
+      1664931617018,
+      20190.03704032425
+    ],
+    [
+      1664935259054,
+      20244.14420129776
+    ],
+	...
+	..	
+  ],
+  "market_caps": [
+    [
+      1664931617018,
+      387094522175.48694
+    ],
+    [
+      1664935259054,
+      388146757322.6555
+    ],
+    . . . . 
+  ],
+  "total_volumes": [
+    [
+      1664931617018,
+      31003046663.57571
+    ],
+    [
+      1664935259054,
+      31329290073.910465
+    ],
+  .....
+  ]
+}
