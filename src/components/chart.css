@@ -1,15 +1,22 @@
 .chart {
-  border: 1px solid red;
-  width: 50%;
+  width: 100%;
   height: 300px;
   margin: 0 auto;
-  background: white;
-  color: red;
+  background: #5182df;
 }
 
 #chartDiv {
   width: 50%;
   height: 100%;
-  background: white;
-  color: red;
+}
+
+#id {
+  color: white;
+}
+
+@media only screen and (min-width: 480px) {
+  .chart {
+    width: 95%;
+    margin: auto;
+  }
 }

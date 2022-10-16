@@ -3,9 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './details.css';
 import returnImg from '../assets/images/return.png';
-// eslint-disable-next-line no-unused-vars
 import Chart from './Chart';
-import SimpleChart from './JsChart';
 
 const Details = () => {
   const { id } = useParams();
@@ -19,7 +17,6 @@ const Details = () => {
   const data2 = new Intl.NumberFormat();
 
   /* eslint-disable consistent-return */
-  // eslint-disable-next-line no-unused-vars
   const renderData = () => {
     if (data) {
       return (
@@ -139,11 +136,10 @@ const Details = () => {
   };
 
   return (
-    <div>
+    <>
       {renderData()}
-      {/* <Chart id={id} /> */}
-      <SimpleChart />
-    </div>
+      <Chart id={id} />
+    </>
   );
 };
 export default Details;

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { readCsvData } from '../apiCalls';
+import { readChartsData } from '../apiCalls';
 
 const initialState = [];
 
@@ -7,25 +7,20 @@ const reducerChart = createSlice({
   name: 'chart',
   initialState,
   reducers: {
-    getChartFromCsv: (state = initialState, action) => [...state, action.payload],
+    putChartDataToStore: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
+      [...state] = [action.payload];
+      return state;
+    },
   },
 });
 
-export const { getChartFromCsv } = reducerChart.actions;
+export const { putChartDataToStore } = reducerChart.actions;
 
-const chartFromCSV = () => async (dispatch) => {
-  const response = await readCsvData();
-  dispatch(getChartFromCsv(response));
+const getChartData = (id) => async (dispatch) => {
+  const response = await readChartsData(id);
+  dispatch(putChartDataToStore(response));
 };
 
-export { chartFromCSV };
+export { getChartData };
 export default reducerChart.reducer;
-
-// {
-//   const tmpArray = Object.entries(action.payload).map((value) => (
-//     { ...value[1] }
-//   ));
-//   // eslint-disable-next-line no-param-reassign
-//   [...state] = [...tmpArray];
-//   return state;
-// }

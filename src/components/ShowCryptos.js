@@ -19,8 +19,7 @@ const ShowCryptos = () => {
       setTxtToSearch(txtTo);
       document.getElementById('search').value = txtTo;
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [txtTo]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
