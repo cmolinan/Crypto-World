@@ -1,0 +1,22 @@
+.chart {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  background: #5182df;
+}
+
+#chartDiv {
+  width: 50%;
+  height: 100%;
+}
+
+#id {
+  color: white;
+}
+
+@media only screen and (min-width: 480px) {
+  .chart {
+    width: 95%;
+    margin: auto;
+  }
+}

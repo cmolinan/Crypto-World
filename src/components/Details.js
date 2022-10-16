@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './details.css';
 import returnImg from '../assets/images/return.png';
+import Chart from './Chart';
 
 const Details = () => {
   const { id } = useParams();
@@ -134,6 +135,11 @@ const Details = () => {
     }
   };
 
-  return <div>{renderData()}</div>;
+  return (
+    <>
+      {renderData()}
+      <Chart id={id} />
+    </>
+  );
 };
 export default Details;

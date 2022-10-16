@@ -1,0 +1,22 @@
+Price 
+
+High 24h  20.383
+Maximun value last 24h
+
+Low 24h US$ 19.521,07
+
+
+Market Capitalization  386.814.255.530
+Is the total value of all the coins that have been mined. It's calculated by multiplying the number of coins in circulation by the current market price of a single coin.
+
+Trading volume (24h) 30.783.877.466
+Number of coins that have exchanged hands during a defined period of time, usually 24 hours. In other words, the 24-hour trading volume of a cryptocurrency is how much value of a coin has been bought and sold over the course of a day.
+
+Total supply   21.000.000
+Refers to the number of coins or tokens that currently exists and are either in circulation or locked somehow. It is the sum of coins that were already mined (or issued) minus the total of coins that were burned or destroyed.
+
+
+
+Circulating Supply 19.169.443
+Number of coins or tokens of a specific cryptocurrency that are publicly available to buy or sell. If you can trade them, they are considered circulating.
+
