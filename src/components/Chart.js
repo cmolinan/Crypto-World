@@ -96,6 +96,7 @@ const Chart = (props) => {
     return () => {
       idRef.current = '';
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idRef.current]);
 
   return (
