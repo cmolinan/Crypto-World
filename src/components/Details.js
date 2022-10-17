@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Tooltip from '@mui/material/Tooltip';
 import './details.css';
 import returnImg from '../assets/images/return.png';
 import Chart from './Chart';
@@ -63,7 +64,13 @@ const Details = () => {
 
           <div className="det_others">
             <div className="det_othTitle">
-              <p className="det_othN">Price</p>
+              <Tooltip
+                title="Cryptocurrencies are a tradable asset, much like stocks, commodities, securities and so on. Their price is determined by how much interest there is on the market in buying them – that's called demand – and how much is available to buy – that's supply. The relationship between the two determines the price"
+                arrow
+                placement="right"
+              >
+                <p className="det_othN">Price</p>
+              </Tooltip>
             </div>
             <div className="det_othData">
               <p>
@@ -86,7 +93,13 @@ const Details = () => {
 
           <div className="det_others d1">
             <div className="det_othTitle">
-              <p className="det_othN">Market Capitalization</p>
+              <Tooltip
+                title="Is the total value of all the coins that have been mined. It's calculated by multiplying the number of coins in circulation by the current market price of a single coin"
+                arrow
+                placement="right"
+              >
+                <p className="det_othN">Market Capitalization</p>
+              </Tooltip>
             </div>
             <div className="det_othData">
               <p>
@@ -103,7 +116,13 @@ const Details = () => {
 
           <div className="det_others">
             <div className="det_othTitle">
-              <p className="det_othN">Trading Volume (last 24h)</p>
+              <Tooltip
+                title="Number of coins that have exchanged hands during a defined period of time, usually 24 hours. In other words, the 24-hour trading volume of a cryptocurrency is how much value of a coin has been bought and sold over the course of a day"
+                placement="right"
+                arrow
+              >
+                <p className="det_othN">Trading Volume (last 24h)</p>
+              </Tooltip>
             </div>
             <div className="det_othData">
               <p>
@@ -115,7 +134,13 @@ const Details = () => {
 
           <div className="det_others d1">
             <div className="det_othTitle">
-              <p className="det_othN">Maximum  Supply</p>
+              <Tooltip
+                title="Refers to the number of coins or tokens that currently exists and are either in circulation or locked somehow. It is the sum of coins that were already mined (or issued) minus the total of coins that were burned or destroyed."
+                placement="right"
+                arrow
+              >
+                <p className="det_othN">Maximum  Supply</p>
+              </Tooltip>
             </div>
             <div className="det_othData">
               <p>{data2.format(data.total_supply)}</p>
@@ -124,7 +149,13 @@ const Details = () => {
 
           <div className="det_others">
             <div className="det_othTitle">
-              <p className="det_othN">Circulation Supply</p>
+              <Tooltip
+                title="Number of coins or tokens of a specific cryptocurrency that are publicly available to buy or sell. If you can trade them, they are considered circulating."
+                placement="right"
+                arrow
+              >
+                <p className="det_othN">Circulation Supply</p>
+              </Tooltip>
             </div>
             <div className="det_othData">
               <p>{data2.format(data.circulating_supply)}</p>
