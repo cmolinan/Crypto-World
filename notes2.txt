@@ -5,6 +5,9 @@ Maximun value last 24h
 
 Low 24h US$ 19.521,07
 
+Price
+Cryptocurrencies are a tradable asset, much like stocks, commodities, securities and so on. Their price is determined by how much interest there is on the market in buying them – that's called demand – and how much is available to buy – that's supply. The relationship between the two determines the price.
+
 
 Market Capitalization  386.814.255.530
 Is the total value of all the coins that have been mined. It's calculated by multiplying the number of coins in circulation by the current market price of a single coin.
