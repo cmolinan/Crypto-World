@@ -1,5 +1,5 @@
 const BaseURL = 'https://api.coingecko.com/api/v3/coins/';
-const GetAll = 'markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false';
+const GetAll = 'markets?vs_currency=USD&order=market_cap_desc&per_page=200&page=1&sparkline=false';
 
 // const ChartsData = 'market_chart?vs_currency=usd&days=365&interval=weekly';
 // fix due to change in Coingecko endpoint
